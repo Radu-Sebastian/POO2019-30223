@@ -1,0 +1,4 @@
+P(x) = 5x^8 -4x^7 + 2x^6 -2x^4 + 3x^3 + 3x - 1   
+Q(x) = 4x^3 -2x^2 + 1   
+O solutie a ecuatiei P(x) = 0 in intervalul (-1,2) este 0.3094501495361328
+O solutie a ecuatiei Q(x) = 0 in intervalul (-1,2) este -0.5000019073486328
