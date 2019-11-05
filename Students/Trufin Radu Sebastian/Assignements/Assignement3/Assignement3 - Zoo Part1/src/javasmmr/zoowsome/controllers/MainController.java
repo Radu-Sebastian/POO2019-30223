@@ -136,7 +136,40 @@ public class MainController
 			}
 		}
 	
+		System.out.println(" \n Mamiferele \n ");
 		for(int i=0; i<mammalPopulation; i++)
+		{
+			String numeClasa = new String(zooMammals[i].getClass().getName());
+			System.out.print(numeClasa.substring(25,numeClasa.length()) + " ");
 			System.out.printf("%s , %.2f°C \n",zooMammals[i].getName(),zooMammals[i].getNormalBodyTemperature(),zooMammals[i]);
+		}
+		
+		System.out.println(" \n Insectele \n ");
+		for(int i=0; i<insectPopulation; i++)
+		{
+			String numeClasa = new String(zooInsects[i].getClass().getName());
+		    System.out.print(numeClasa.substring(25,numeClasa.length()) + " " + zooInsects[i].getName() + "\n"  );
+		}
+		
+		System.out.println(" \n Pasarile \n ");
+		for(int i=0; i<birdPopulation; i++)
+		{
+			String numeClasa = new String(zooBirds[i].getClass().getName());
+		    System.out.print(numeClasa.substring(25,numeClasa.length()) + " " + zooBirds[i].getName() + "\n"  );
+		}
+		
+		System.out.println(" \n Reptilele \n ");
+		for(int i=0; i<reptilePopulation; i++)
+		{
+			String numeClasa = new String(zooReptiles[i].getClass().getName());
+		    System.out.print(numeClasa.substring(25,numeClasa.length()) + " " + zooReptiles[i].getName() + "\n"  );
+		}
+		
+		System.out.println(" \n Acvaticele \n ");
+		for(int i=0; i<aquaticPopulation; i++)
+		{
+			String numeClasa = new String(zooAquatics[i].getClass().getName());
+		    System.out.print(numeClasa.substring(25,numeClasa.length()) + " " + zooAquatics[i].getName() + "\n"  );
+		}
 	}
 }
