@@ -43,7 +43,6 @@ public class Tiger extends Mammal
 		   else
 		       this.setDangerPerc(this.getDangerPerc() + extraPercentage);
 		}
-		
 		return this.getDangerPerc();
 	}
 }

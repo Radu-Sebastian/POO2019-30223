@@ -62,7 +62,7 @@ public abstract class Animal implements Killer
 		this.name = name;
 		this.takenCareOf = takenCareOf;
 		this.maintenanceCost = maintenanceCost;
-		this.dangerPerc = dangerPerc + this.getPredisposition();
+		this.dangerPerc = dangerPerc;
 	}
 	
 	public void setNrOfLegs(Integer k)
