@@ -1,7 +1,6 @@
 package javasmmr.zoowsome.models;
 import javax.xml.stream.XMLEventWriter;
 import javax.xml.stream.XMLStreamException;
-import org.w3c.dom.Element;
 import javasmmr.zoowsome.services.Constants;
 import static javasmmr.zoowsome.repositories.EntityRepository.createNode;
 
@@ -22,7 +21,7 @@ public class Seahorse extends Aquatic
 
 	public Seahorse()
 	{
-		this.name = "Murgu";
+		this.name = "<Unknown Seahorse>";
 		this.nrOfLegs = 0;
 		this.avgSwimDepth = 500;
 	}
@@ -30,11 +29,5 @@ public class Seahorse extends Aquatic
 	public double getPredisposition()
 	{
 		return (float) (Math.floor(this.dangerPerc * 100)/100);
-	}
-
-	@Override
-	public void decodeFromXml(Element element) {
-		// TODO Auto-generated method stub
-		
 	}
 }

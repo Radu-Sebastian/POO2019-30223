@@ -32,7 +32,7 @@ public abstract class Insect extends Animal
 	
 	public Insect()
 	{
-		this.name = "<Unknown name>";
+		this.name = "<Unknown Name>";
 	}
 	
 	public void setFly(boolean canFly)

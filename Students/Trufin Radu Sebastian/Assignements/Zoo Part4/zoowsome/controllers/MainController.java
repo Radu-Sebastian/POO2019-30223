@@ -26,7 +26,6 @@ public class MainController <T extends XML_Parsable>
 		AnimalFactory abstractFactory = new AnimalFactory();
 		EmployeeFactory abstractEmployeeFactory = new EmployeeFactory();
 
-		
 		int caretakerCount = 10;
 		int zooCount = 50;
 		
@@ -234,13 +233,15 @@ public class MainController <T extends XML_Parsable>
 		{
 			String formatDanger = String.format("%.02f",zooMammals[i].getDangerPerc());
 			String formatPredisposition = String.format("%.02f",zooMammals[i].getPredisposition());
-			if(zooMammals[i].getClass().getName() == "javasmmr.zoowsome.models.Tiger")
-				System.out.println("Tiger " + zooMammals[i].getName() + " has danger percentage of "
-						+ formatDanger + " in the other cases and " + formatPredisposition
-						+ " if you are unlucky. ");
+			if(zooMammals[i] instanceof Tiger)
+				{
+				    System.out.println("Tiger " + zooMammals[i].getName() + " has danger percentage of "
+					+ formatDanger + " in the other cases and " + formatPredisposition
+					+ " now. ");
+				}
 		}
 		
-		ArrayList<Animal> myAnimals = new ArrayList<Animal>(50);
+		ArrayList<Animal> myAnimals = new ArrayList<Animal>(zooCount);
 		for(int i=0; i<mammalPopulation; i++)
 		{
 			zooMammals[i].setDangerPerc(Math.floor(zooMammals[i].getDangerPerc()*100)/100);

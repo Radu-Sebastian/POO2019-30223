@@ -1,7 +1,6 @@
 package javasmmr.zoowsome.models;
 import javax.xml.stream.XMLEventWriter;
 import javax.xml.stream.XMLStreamException;
-import org.w3c.dom.Element;
 import javasmmr.zoowsome.services.Constants;
 import static javasmmr.zoowsome.repositories.EntityRepository.createNode;
 import java.time.LocalTime;
@@ -23,7 +22,7 @@ public class Spider extends Insect
 	
 	public Spider()
 	{
-		this.name = "Lucas";
+		this.name = "<Unknown Spider>";
 		this.canFly = false;
 		this.isDangerous = true;
 		this.nrOfLegs = 8;
@@ -39,11 +38,5 @@ public class Spider extends Insect
 		   this.setDangerPerc(this.getDangerPerc() + 0.25);
 		}
 		return (float) (Math.floor(this.dangerPerc * 100)/100);
-	}
-
-	@Override
-	public void decodeFromXml(Element element) {
-		// TODO Auto-generated method stub
-		
 	}
 }

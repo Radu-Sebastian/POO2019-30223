@@ -1,7 +1,6 @@
 package javasmmr.zoowsome.models;
 import javax.xml.stream.XMLEventWriter;
 import javax.xml.stream.XMLStreamException;
-import org.w3c.dom.Element;
 import static javasmmr.zoowsome.repositories.EntityRepository.createNode;
 import javasmmr.zoowsome.services.Constants;
 
@@ -22,7 +21,7 @@ public class Chameleon extends Reptile
 	
 	public Chameleon()
 	{
-		this.name = "Oedipus";
+		this.name = "<Unknown Chameleon>";
 		this.laysEggs = true;
 		this.nrOfLegs = 2;
 	}
@@ -31,11 +30,4 @@ public class Chameleon extends Reptile
 	{
 		return (float) (Math.floor(this.dangerPerc * 100)/100);
 	}
-
-	@Override
-	public void decodeFromXml(Element element) {
-		// TODO Auto-generated method stub
-		
-	}
-
 }

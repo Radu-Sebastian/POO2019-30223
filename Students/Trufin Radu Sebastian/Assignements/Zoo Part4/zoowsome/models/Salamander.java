@@ -1,7 +1,6 @@
 package javasmmr.zoowsome.models;
 import javax.xml.stream.XMLEventWriter;
 import javax.xml.stream.XMLStreamException;
-import org.w3c.dom.Element;
 import javasmmr.zoowsome.services.Constants;
 import static javasmmr.zoowsome.repositories.EntityRepository.createNode;
 import java.time.LocalTime;
@@ -23,7 +22,7 @@ public class Salamander extends Aquatic
 	
 	public Salamander()
 	{
-		this.name = "Cerasela";
+		this.name = "<Unknown Salamander>";
 		this.nrOfLegs = 4;
 		this.avgSwimDepth = 175;
 	}
@@ -38,11 +37,5 @@ public class Salamander extends Aquatic
 		   this.setDangerPerc(this.getDangerPerc() + 0.45);
 		}
 		return (float) (Math.floor(this.dangerPerc * 100)/100);
-	}
-
-	@Override
-	public void decodeFromXml(Element element) {
-		// TODO Auto-generated method stub
-		
 	}
 }
