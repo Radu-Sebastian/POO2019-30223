@@ -11,7 +11,7 @@ public class AbstractController
 	{
 		this.frame = frame;
 		if (hasBackButton)
-			frame.setBackButtonActionListener(new BackButtonListener());
+			frame.setBackButtonAndClockActionListener(new BackButtonListener());
 	}
 	
 	private class BackButtonListener implements ActionListener 

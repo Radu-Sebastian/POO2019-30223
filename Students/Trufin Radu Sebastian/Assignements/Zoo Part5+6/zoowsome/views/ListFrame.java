@@ -23,10 +23,15 @@ import javasmmr.zoowsome.services.Constants;
 public class ListFrame extends ZooFrame 
 {
 	private static final long serialVersionUID = 1L;
+	
+    static AnimalRepository animalRepository = new AnimalRepository("AnimalsGeneric.xml", Constants.XML_TAGS.ANIMAL);
+    static EmployeeRepository employeeRepository = new EmployeeRepository("EmployeesGeneric.xml", Constants.XML_TAGS.EMPLOYEE);
+	static ArrayList<Animal> myAnimals;
 
 	public ListFrame(String title) throws ParserConfigurationException, SAXException, IOException 
 	{
 		super(title);
+		
 		contentPanel.setLayout(new GridLayout(1,2));
 		JPanel newPanel = new JPanel(new GridLayout());
 		Border border = BorderFactory.createLineBorder(Color.magenta);
@@ -39,7 +44,8 @@ public class ListFrame extends ZooFrame
 		    }
 
 		    @Override
-		    public TableCellRenderer getCellRenderer (int arg0, int arg1) {
+		    public TableCellRenderer getCellRenderer(int arg0, int arg1) 
+		    {
 		        return renderCenter;
 		    }
 		};
@@ -54,10 +60,12 @@ public class ListFrame extends ZooFrame
 		    }
 
 		    @Override
-		    public TableCellRenderer getCellRenderer (int arg0, int arg1) {
+		    public TableCellRenderer getCellRenderer (int arg0, int arg1) 
+		    {
 		        return renderCenter;
 		    }
 		};
+		
 		JScrollPane caretakerScroll = new JScrollPane(caretakerTable);
 		newPanel.setBorder(border);
 		animalTable.setName("Zoowsome Members");
@@ -68,10 +76,9 @@ public class ListFrame extends ZooFrame
 		caretakerTable.setForeground(new Color(51,51,51));
 		
 		DefaultTableModel animalModel = new DefaultTableModel();
-		String[] headers = {"Name", "Danger %" ,"Maintenance Cost", "Number of legs", "Discriminant"};
-		animalModel.setColumnIdentifiers(headers);
+		String[] animalHeaders = {"Name", "Danger %" ,"Maintenance Cost", "Number of legs", "Discriminant"};
+		animalModel.setColumnIdentifiers(animalHeaders);
 		animalTable.setDefaultEditor(Object.class, null);
-		AnimalRepository animalRepository = new AnimalRepository("AnimalsGeneric.xml", Constants.XML_TAGS.ANIMAL);
 		ArrayList<Animal> myAnimals = animalRepository.load();
 		
 		Object animalRowData[] = new Object[5];
@@ -86,10 +93,9 @@ public class ListFrame extends ZooFrame
 		}
 		
 		DefaultTableModel caretakerModel = new DefaultTableModel();
-		String[] headers2 = {"Name", "ID" ,"Salary", "Death Status", "Discriminant"};
-		caretakerModel.setColumnIdentifiers(headers2);
+		String[] caretakerHeaders = {"Name", "ID" ,"Salary", "Death Status", "Discriminant"};
+		caretakerModel.setColumnIdentifiers(caretakerHeaders);
 		caretakerTable.setDefaultEditor(Object.class, null);
-		EmployeeRepository employeeRepository = new EmployeeRepository("EmployeesGeneric.xml", Constants.XML_TAGS.EMPLOYEE);
 		ArrayList<Employee> myEmployees = employeeRepository.load();
 		animalTable.setAlignmentX(CENTER_ALIGNMENT);
 		animalTable.setAlignmentY(CENTER_ALIGNMENT);
@@ -113,9 +119,9 @@ public class ListFrame extends ZooFrame
 		
 		contentPanel.add(newPanel);
 	}
-
-	@Override
-	public void goBack() 
+	
+	public static AnimalRepository getAnimalRepository()
 	{
+		return animalRepository;
 	}
 }

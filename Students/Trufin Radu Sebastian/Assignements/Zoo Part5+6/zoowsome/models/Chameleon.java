@@ -34,6 +34,6 @@ public class Chameleon extends Reptile
 
 	public double getPredisposition() 
 	{
-		return (float) (Math.floor(this.dangerPerc * 100) / 100);
+		return (float) (Math.floor(this.dangerPerc * 100)/100);
 	}
 }

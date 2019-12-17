@@ -3,25 +3,57 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+import java.util.TimeZone;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
 import javasmmr.zoowsome.employees.Caretaker;
 import javasmmr.zoowsome.views.utilities.FrameStack;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JMenuItem;
 import javax.swing.JPanel;
+import javax.swing.JPopupMenu;
 import javax.swing.border.EmptyBorder;
 
-public abstract class ZooFrame extends JFrame implements ZooFrame_I 
+public abstract class ZooFrame extends JFrame
 {	
+	public class timeMenu extends JPopupMenu
+	{
+		private static final long serialVersionUID = 1L;
+
+		timeMenu()
+		{
+			String[] timeZones = {"Europe/Bucharest", "Europe/Berlin", "Europe/London",
+					"Europe/Moscow", "America/New_York", "Asia/Tokyo", "US/Hawaii", "US/Pacific"};
+			
+			for(int i=0; i<timeZones.length; i++)
+			{
+				JMenuItem popList = new JMenuItem(timeZones[i]);
+				popList.addActionListener(popUpListener);
+				add(popList);
+			}
+		}
+		
+		ActionListener popUpListener = new ActionListener()
+		{
+			@Override
+			public void actionPerformed(ActionEvent e) 
+			{
+				JMenuItem popMenu = (JMenuItem) e.getSource();
+				myTimeZone = popMenu.getText();
+			}
+		};
+	}
+	
 	private static final long serialVersionUID = 1L;
 	protected JPanel contentPanel;
+	String myTimeZone = new String("Europe/Bucharest");
 	
 	public ZooFrame(String title) 
 	{
@@ -37,10 +69,11 @@ public abstract class ZooFrame extends JFrame implements ZooFrame_I
 		add(contentPanel, BorderLayout.CENTER);
 	}
 	
-	public void setBackButtonActionListener(ActionListener a) 
+	public void setBackButtonAndClockActionListener(ActionListener a) 
 	{
 		JPanel buttonPanel = new JPanel();
 		JLabel clockLabel = new JLabel();
+		clockLabel.setComponentPopupMenu(new timeMenu());
 		buttonPanel.setLayout(new FlowLayout(FlowLayout.LEFT));
 		JButton backButton = new JButton("Back");
 		backButton.setBackground(new Color(230,230,250));
@@ -52,7 +85,7 @@ public abstract class ZooFrame extends JFrame implements ZooFrame_I
 		clockLabel.setForeground(new Color(67,67,67));
 		buttonPanel.add(clockLabel);
 		currentDate(clockLabel);
-		this.add(buttonPanel, BorderLayout.NORTH);
+		add(buttonPanel, BorderLayout.NORTH);
 		backButton.addActionListener(a);
 		setVisible(true); 
 	}
@@ -61,24 +94,26 @@ public abstract class ZooFrame extends JFrame implements ZooFrame_I
 	{
 		Thread clock = new Thread() 
 		{
-		public void run()
-		{
-			for(;;)
+			public void run()
 			{
-				try 
+				for(;;)
 				{
-				Calendar cal = new GregorianCalendar();
-				SimpleDateFormat myFormat = new SimpleDateFormat("HH:mm:ss");
-				clockLabel.setText(myFormat.format(cal.getTime()));
-				clockLabel.revalidate();
-				clockLabel.repaint();
-				sleep(1000);
-				} catch(InterruptedException e)
-				{
-				    	Logger.getLogger(Caretaker.class.getName()).log(Level.SEVERE, "Error");
-				}
-			}	
-		}
+					try 
+					{
+						SimpleDateFormat myFormat;
+						Calendar cal = new GregorianCalendar();
+						myFormat = new SimpleDateFormat("HH:mm:ss");
+						myFormat.setTimeZone(TimeZone.getTimeZone(myTimeZone));
+						clockLabel.setText(myFormat.format(cal.getTime()));
+				        clockLabel.revalidate();
+				        clockLabel.repaint();
+				        sleep(1000);
+				    }   catch(InterruptedException e)
+				    {
+				        Logger.getLogger(Caretaker.class.getName()).log(Level.SEVERE, "Error");
+				    }
+			    }	
+		    }
 		};
 		clock.start();
 	}

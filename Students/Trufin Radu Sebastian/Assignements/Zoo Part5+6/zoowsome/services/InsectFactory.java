@@ -9,27 +9,30 @@ public class InsectFactory extends SpeciesFactory
 {
 	public Animal getAnimal(String type) throws Exception
 	{
-		Random r = new Random();
+		Random randomizer = new Random();
 		
-		String[] ButterflyNames = new String[] { "Icky", "Ozzy", "Nacho", "Faraday", "Rufus", "Casper",
-				"Melkior", "Leonidas", "Fubini", "Cosmo" };
+		String[] ButterflyNames = new String[] {"Icky", "Ozzy", "Nacho", "Faraday", "Rufus", "Casper",
+				"Melkior", "Leonidas", "Fubini", "Cosmo", "Behemai", "Kelllueth", "Wolperbrai", 
+				"Yassox", "Uvilkomp", "Vieren", "Thiacore", "Idusa", "Choomacka"};
 		
-		String[] SpiderNames = new String[] { "Cauchy", "Weierstrass", "Gauss", "Abel", "Galois", "Lagrange",
-				"Riemann", "Goldbach", "Euler", "Euclid" };
+		String[] SpiderNames = new String[] {"Cauchy", "Weierstrass", "Gauss", "Abel", "Galois", "Lagrange",
+				"Riemann", "Goldbach", "Euler", "Euclid", "Eipom", "Asenshoost", "Arachlpups", 
+				"Ouroshais", "Vameiz", "Dhimcix", "Yiotrice", "Laalenus", "Dhimcix"};
 		
-		String[] CockroachNames = new String[] { "Descartes", "Pitagora", "Pascal", "Turing", "Ramanujan", "Eratostene",
-				"Fermat", "Leibniz", "Newton", "Hilbert" };
+		String[] CockroachNames = new String[] {"Descartes", "Pitagora", "Pascal", "Turing", "Ramanujan", "Eratostene",
+				"Fermat", "Leibniz", "Newton", "Hilbert", "Lamayuam", "Cargith", "Mazppe", "Kaushee",
+				"Aucabkh", "Ruecorn", "Pubibrea", "Pheton", "Himua", "Calmau"};
 		
-		int randButterflyName = r.nextInt(ButterflyNames.length);
-		int randSpiderName = r.nextInt(SpiderNames.length);
-		int randCockroachName = r.nextInt(CockroachNames.length);
+		int randButterflyName = randomizer.nextInt(ButterflyNames.length);
+		int randSpiderName = randomizer.nextInt(SpiderNames.length);
+		int randCockroachName = randomizer.nextInt(CockroachNames.length);
 		
-		Boolean isDangerous = r.nextBoolean();
-		Boolean doesFly = r.nextBoolean();
+		Boolean isDangerous = randomizer.nextBoolean();
+		Boolean doesFly = randomizer.nextBoolean();
 		
 		double randDanger = Math.random();
 		double randMaintenance = Math.random() * 8;
-	    boolean randCareOf = r.nextBoolean();
+	    boolean randCareOf = randomizer.nextBoolean();
 	    randDanger = Math.floor(randDanger * 100)/100;
 	    randMaintenance = Math.floor(randMaintenance * 100)/100;
 		
@@ -40,6 +43,6 @@ public class InsectFactory extends SpeciesFactory
         else if (Constants.Animals.Insects.Cockroach.equals(type))
             return new Cockroach(8,CockroachNames[randCockroachName],doesFly,isDangerous,randCareOf,randMaintenance,randDanger);
         else
-        	throw new Exception ("Invalid animal exception");
+        	throw new Exception("Invalid animal exception");
 	}
 }

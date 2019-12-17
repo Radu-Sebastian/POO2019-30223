@@ -1,13 +1,13 @@
 package javasmmr.zoowsome.views;
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.Graphics;
 import java.awt.GridLayout;
 import java.awt.event.ActionListener;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JPanel;
-
 import javax.swing.SpringLayout;
 
 public class MainMenuFrame extends ZooFrame 
@@ -21,15 +21,25 @@ public class MainMenuFrame extends ZooFrame
 	{
 		super(title);
 		contentPanel.setLayout(new GridLayout(0, 3, 0, 0));
-		JPanel panel = new JPanel();
+		JPanel panel = new JPanel() 
+		{	
+				private static final long serialVersionUID = 1L;
+
+				public void paintComponent(Graphics g) 
+	        	{
+	        		super.paintComponent(g);
+	        		g.setFont(new Font("Helvetica", Font.CENTER_BASELINE, 15));
+	        		g.drawString("Radu-Sebastian's Zoo ", 25, 25);  
+	        	}
+	    };
+		
 		contentPanel.add(panel);
 		JPanel pan = new JPanel();
 		contentPanel.add(pan);
 		SpringLayout slPanel = new SpringLayout();
 		pan.setLayout(slPanel);
 
-		Icon addIcon = new ImageIcon(this.getClass().getResource("vault2.png"));
-		
+		Icon addIcon = new ImageIcon(getClass().getResource("vault2.png"));
 		btnAdd = new JButton("Fill the Zoo!",addIcon);
 		btnAdd.setBackground(new Color(230,230,250));
 		btnAdd.setFont(new Font("Helvetica", Font.CENTER_BASELINE, 20));
@@ -59,9 +69,19 @@ public class MainMenuFrame extends ZooFrame
 		slPanel.putConstraint(SpringLayout.WEST, btnSaveAndExit, 0, SpringLayout.WEST, pan);
 		
 		pan.add(btnSaveAndExit);
-		JPanel panel_2 = new JPanel();
+		JPanel panel_2 = new JPanel()
+		{	
+			private static final long serialVersionUID = 1L;
+
+			public void paintComponent(Graphics g) 
+        	{
+        		super.paintComponent(g);
+        		g.setFont(new Font("Helvetica", Font.CENTER_BASELINE, 15));
+        		g.drawString(" © 2019 ", 335, 25); 
+        	}
+        };
+        
 		contentPanel.add(panel_2);
-       
 		setVisible(true); 
 	}
 	
@@ -82,11 +102,6 @@ public class MainMenuFrame extends ZooFrame
 	
 	private void exitApplication()
 	{
-	      System.exit(0); 
-	}
-
-	@Override
-	public void goBack() 
-	{
+	    System.exit(0); 
 	}
 }

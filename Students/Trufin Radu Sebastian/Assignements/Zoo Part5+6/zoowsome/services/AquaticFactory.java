@@ -10,28 +10,31 @@ public class AquaticFactory extends SpeciesFactory
 {
 	public Animal getAnimal(String type) throws Exception
 	{
-		Random r = new Random();
+		Random randomizer = new Random();
 		
-		String[] SeahorseNames = new String[] { "Odie", "Duke", "Gheorghe", "Mike", "Ralph", "Mordecai",
-				"Palestina", "Matteo", "Sandor", "Murgu" };
+		String[] SeahorseNames = new String[] {"Odie", "Duke", "Gheorghe", "Mike", "Ralph", "Mordecai",
+				"Palestina", "Matteo", "Sandor", "Murgu", "Walypus", "Ostooddorsee", "Gaussule", 
+				"Vlextile", "Hyenora", "Komadger", "Gixowary", "Mutauxee"};
 		
-		String[] SalamanderNames = new String[] { "Leonard", "Chronos", "Kepler", "Rutherford", "Zeus", "Pablo",
-				"Alberto", "Richarlison", "G.Ioan", "Esteban" };
+		String[] SalamanderNames = new String[] {"Leonard", "Chronos", "Kepler", "Rutherford", "Zeus", "Pablo",
+				"Alberto", "Richarlison", "G.Ioan", "Esteban", "Xusseetsi", "Eaguin", "Pengarak", 
+				"Anteato", "Qourruko",  "Krouleosel", "Eaguin", "Glacoorso"};
 		
-		String[] ClownfishNames = new String[] { "Nemo", "Zalmodegikos", "Oroles", "Decebal", "Burebista", "Thiamarcos",
-				"Deceneu", "Coryllus", "Scorilo", "Koson" };
+		String[] ClownfishNames = new String[] {"Nemo", "Zalmodegikos", "Oroles", "Decebal", "Burebista", "Thiamarcos",
+				"Deceneu", "Coryllus", "Scorilo", "Koson", "Mulatross", "Bamor", "Xeakodo", 
+				"Zudopecker", "Xeakodo", "Walenneta", "Skustreana"};
 		
-		int randSeahorseName = r.nextInt(SeahorseNames.length);
-		int randSalamanderName = r.nextInt(SalamanderNames.length);
-		int randClownfishName = r.nextInt(ClownfishNames.length);
+		int randSeahorseName = randomizer.nextInt(SeahorseNames.length);
+		int randSalamanderName = randomizer.nextInt(SalamanderNames.length);
+		int randClownfishName = randomizer.nextInt(ClownfishNames.length);
 		
-		int swimDepth = r.nextInt(1000);
-		Aquatic.waterType wType[] = { Aquatic.waterType.freshwater, Aquatic.waterType.saltwater };
-		int typeOfWater = r.nextInt(2);
+		int swimDepth = randomizer.nextInt(1000);
+		Aquatic.waterType wType[] = {Aquatic.waterType.freshwater, Aquatic.waterType.saltwater};
+		int typeOfWater = randomizer.nextInt(2);
 		
 		double randDanger = Math.random();
 		double randMaintenance = Math.random() * 8;
-	    boolean randCareOf = r.nextBoolean();
+	    boolean randCareOf = randomizer.nextBoolean();
 	    randDanger = Math.floor(randDanger * 100)/100;
 	    randMaintenance = Math.floor(randMaintenance * 100)/100;
 

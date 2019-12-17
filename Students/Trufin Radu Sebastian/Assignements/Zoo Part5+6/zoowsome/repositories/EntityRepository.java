@@ -78,7 +78,7 @@ public abstract class EntityRepository<T extends XML_Parsable>
 
 		NodeList nodeList = doc.getElementsByTagName(this.entityTag);
 
-		for (int i = 0; i < nodeList.getLength(); i++) 
+		for (int i=0; i<nodeList.getLength(); i++) 
 		{
 			Node node = nodeList.item(i);
 			if (node.getNodeType() == Node.ELEMENT_NODE) 

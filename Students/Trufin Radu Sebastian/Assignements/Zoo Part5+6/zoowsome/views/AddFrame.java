@@ -5,6 +5,7 @@ import java.awt.Desktop;
 import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.GridLayout;
+import java.awt.event.ActionListener;
 import java.net.URI;
 import java.util.LinkedList;
 import javax.swing.Icon;
@@ -29,7 +30,7 @@ public class AddFrame extends ZooFrame
 	JTextField nameTextField = new JTextField(10);
 	JButton addButton = new JButton("Add");
     JButton deleteButton = new JButton("Delete");
-	JButton displayAllButton = new JButton("Display Caretakers");
+	JButton addAnimalButton = new JButton("Add Animals");
 	JButton exitButton = new JButton("Exit");
 	Icon vaultIcon = new ImageIcon(this.getClass().getResource("vaultboy.png"));
 	JButton iconButton = new JButton(" ",vaultIcon);
@@ -49,7 +50,7 @@ public class AddFrame extends ZooFrame
 
 		secondPanel.add(addButton);
 		secondPanel.add(deleteButton);
-		secondPanel.add(displayAllButton);
+		secondPanel.add(addAnimalButton);
 		secondPanel.add(exitButton);
 		secondPanel.add(iconButton);
 
@@ -62,8 +63,8 @@ public class AddFrame extends ZooFrame
 	    addButton.setBackground(new Color(230,230,250));
 	    deleteButton.setFont(new Font("Helvetica", Font.CENTER_BASELINE, 20));
 	    deleteButton.setBackground(new Color(230,230,250));
-	    displayAllButton.setFont(new Font("Helvetica", Font.CENTER_BASELINE, 20));
-	    displayAllButton.setBackground(new Color(230,230,250));
+	    addAnimalButton.setFont(new Font("Helvetica", Font.CENTER_BASELINE, 20));
+	    addAnimalButton.setBackground(new Color(230,230,250));
 	    exitButton.setFont(new Font("Helvetica", Font.CENTER_BASELINE, 20));
 	    exitButton.setBackground(new Color(230,230,250));
 	    idTextField.setFont(new Font("Helvetica", Font.CENTER_BASELINE, 20));
@@ -75,7 +76,7 @@ public class AddFrame extends ZooFrame
 		add(gridPanel, BorderLayout.SOUTH);
 		
 		addButton.addActionListener(event -> addCaretaker());
-	    displayAllButton.addActionListener(event -> displayAll());
+		addAnimalButton.addActionListener(event -> displayAll());
 	    exitButton.addActionListener(event -> exitApplication());
 	    deleteButton.addActionListener(event -> deleteCaretaker());
 	    
@@ -89,7 +90,7 @@ public class AddFrame extends ZooFrame
             if (desktop != null && desktop.isSupported(Desktop.Action.BROWSE))
             {
                 desktop.browse(new URI(url));
-             }
+            }
             throw new NullPointerException();
         } catch (Exception e) 
         {
@@ -171,6 +172,11 @@ public class AddFrame extends ZooFrame
 	      System.exit(0); 
 	}
 	
+	public void setAddAnimalActionListener(ActionListener a) 
+	{
+		addAnimalButton.addActionListener(a);
+	}
+	
 	private void displayAll()
 	{
 	      caretakerTextArea.setText("");
@@ -178,10 +184,5 @@ public class AddFrame extends ZooFrame
 	      {
 	    	  caretakerTextArea.append (caretaker + "\n");
 	      }
-	}
-
-	@Override
-	public void goBack() 
-	{
 	}
 }

@@ -16,7 +16,11 @@ import javasmmr.zoowsome.services.SpeciesFactory;
 
 public class MainController <T extends XML_Parsable> 
 {
-	public static ArrayList<Employee> myEmployees = new ArrayList<Employee>();
+	public static AnimalRepository myAnimalRepository;
+	public static EmployeeRepository myEmployeeRepository;
+	public static ArrayList<Animal> animalList;
+	public static ArrayList<Employee> myEmployees;
+	
 	public static void main(String[] args) throws Exception 
 	{
 		AnimalFactory abstractFactory = new AnimalFactory();
@@ -44,6 +48,7 @@ public class MainController <T extends XML_Parsable>
 		SpeciesFactory speciesFactoryAquatics = abstractFactory.getSpeciesFactory(Constants.Species.Aquatics);
 		SpeciesFactory speciesFactoryReptiles = abstractFactory.getSpeciesFactory(Constants.Species.Reptiles);
 		SpeciesFactory speciesFactoryInsects = abstractFactory.getSpeciesFactory(Constants.Species.Insects);
+		
 		EmployeeAbstractFactory employeeFactory = abstractEmployeeFactory.getEmployeeFactory(Constants.EmployeeTypes.Caretakers);
 		
 		for(int i=0; i<caretakerCount; i++)
@@ -54,10 +59,10 @@ public class MainController <T extends XML_Parsable>
 
 		for (int i=0; i<zooCount; i++) 
 		{
-			Random S = new Random();
-			Random A = new Random();
-			int sType = S.nextInt(5);
-			int aType = A.nextInt(3);
+			Random firstRandom = new Random();
+			Random secondRandom = new Random();
+			int sType = firstRandom.nextInt(5);
+			int aType = secondRandom.nextInt(3);
 
 			if (sType == 0) 
 			{
@@ -187,7 +192,7 @@ public class MainController <T extends XML_Parsable>
 		    System.out.print(numeClasa.substring(25,numeClasa.length()) + " " + zooAquatics[i].getName() + "\n"  );
 		}
 		
-		int j = 0;
+		int j=0;
 		for(int i=0; i<caretakerPopulation; i++)
 		{
 			while(j<mammalPopulation)
@@ -256,7 +261,7 @@ public class MainController <T extends XML_Parsable>
 		AnimalRepository myAnimalRepository = new AnimalRepository("AnimalsGeneric.xml",Constants.XML_TAGS.ANIMAL);
 		myAnimalRepository.save(myAnimals);
 		ArrayList<Animal> animalList = myAnimalRepository.load();
-
+		
 		ArrayList<Employee> myEmployees = new ArrayList<Employee>(caretakerPopulation);
 		
 		for(int i=0; i<caretakerPopulation; i++)
@@ -266,10 +271,10 @@ public class MainController <T extends XML_Parsable>
 		myEmployeeRepository.save(myEmployees);
 		ArrayList<Employee> caretakerList = myEmployeeRepository.load();
 		
-		for(int i=0; i <animalList.size(); i++)
+		for(int i=0; i<animalList.size(); i++)
 			System.out.println(animalList.get(i).getName());
 		System.out.println();
-		for(int i=0; i <caretakerList.size(); i++)
+		for(int i=0; i<caretakerList.size(); i++)
 			System.out.println(caretakerList.get(i).getName());
 	}
 }

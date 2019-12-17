@@ -9,24 +9,27 @@ public class BirdFactory extends SpeciesFactory
 {
 	public Animal getAnimal(String type) throws Exception
 	{
-		Random r = new Random();
+		Random randomizer = new Random();
 		
-		String[] ColibriNames = new String[] { "Rumplesnakeskin", "Merlin", "Marcel", "Laur", "Mutu", "Pomelo",
-				"Israel", "Omar", "Hassan", "El Zorab" };
+		String[] ColibriNames = new String[] {"Radu", "Merlin", "Marcel", "Laur", "Mutu", "Pomelo",
+				"Israel", "Omar", "Hassan", "El Zorab", "Spiraan", "Stinegat", "Mosqicadea",
+				"Soustoon", "Moxoceros", "Darrilla"};
 		
-		String[] KiwiNames = new String[] { "King", "Shakespeare", "Alduin", "Lodi", "Botezatu", "Grindeanu",
-				"Chowder", "Yoda", "Mirel", "Ajax" };
+		String[] KiwiNames = new String[] {"King", "Shakespeare", "Alduin", "Lodi", "Botezatu", "Grindeanu",
+				"Chowder", "Yoda", "Mirel", "Ajax", "Qostetopus", "Luqecea", "Greodoomo", "Alleleon",
+				"Buffitar", "Jaguflam", "Hexaurrimea"};
 		
-		String[] PenguinNames = new String[] { "Snip", "Snap", "Dorian", "Robert", "Varga", "Dexter",
-				"Goblin", "Romulus", "Yoshi", "Honda" };
+		String[] PenguinNames = new String[] {"Snip", "Snap", "Dorian", "Robert", "Varga", "Dexter",
+				"Goblin", "Romulus", "Yoshi", "Honda", "Gloxeleon", "Goocsadger", "Wekeabug",
+				"Weopecker", "Reastatee", "Kisoc", "Albingo"};
 		
-		int randColibriName = r.nextInt(ColibriNames.length);
-		int randKiwiName = r.nextInt(KiwiNames.length);
-		int randPenguinName = r.nextInt(PenguinNames.length);
+		int randColibriName = randomizer.nextInt(ColibriNames.length);
+		int randKiwiName = randomizer.nextInt(KiwiNames.length);
+		int randPenguinName = randomizer.nextInt(PenguinNames.length);
 		
 		double randDanger = Math.random();
 		double randMaintenance = Math.random() * 8;
-	    boolean randCareOf = r.nextBoolean();
+	    boolean randCareOf = randomizer.nextBoolean();
 	    randDanger = Math.floor(randDanger * 100)/100;
 	    randMaintenance = Math.floor(randMaintenance * 100)/100;
 	    

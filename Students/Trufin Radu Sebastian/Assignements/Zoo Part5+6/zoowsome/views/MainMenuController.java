@@ -2,11 +2,8 @@ package javasmmr.zoowsome.views;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
-
 import javax.xml.parsers.ParserConfigurationException;
-
 import org.xml.sax.SAXException;
-
 import javasmmr.zoowsome.views.AddFrame;
 import javasmmr.zoowsome.views.MainMenuFrame;
 
@@ -33,9 +30,11 @@ public class MainMenuController extends AbstractController
 		@Override
 		public void actionPerformed(ActionEvent e) 
 		{
-			try {
+			try 
+			{
 				new ListController(new ListFrame("List"), true);
-			} catch (ParserConfigurationException | SAXException | IOException e1) {
+			} catch (ParserConfigurationException | SAXException | IOException e1) 
+			{
 				e1.printStackTrace();
 			}
 		}
