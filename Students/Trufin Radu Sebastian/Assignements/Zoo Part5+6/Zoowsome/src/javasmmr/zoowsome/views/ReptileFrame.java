@@ -30,11 +30,11 @@ public class ReptileFrame extends ZooFrame
 	private static final long serialVersionUID = 1L;
 	JPanel gridPanel =  new JPanel(new GridLayout(4, 1));
 	JPanel newPanel = new JPanel(new SpringLayout());
-	Icon geckoIcon = new ImageIcon(this.getClass().getResource("pictures/gecko.png"));
+	Icon geckoIcon = new ImageIcon("./resources/gecko.png");
 	JButton geckoButton = new JButton("Gecko",geckoIcon);
-	Icon iguanaIcon = new ImageIcon(this.getClass().getResource("pictures/iguana.png"));
+	Icon iguanaIcon = new ImageIcon("./resources/iguana.png");
 	JButton iguanaButton = new JButton("Iguana",iguanaIcon);
-	Icon chameleonIcon = new ImageIcon(this.getClass().getResource("pictures/chameleon.png"));
+	Icon chameleonIcon = new ImageIcon("./resources/chameleon.png");
 	JButton chameleonButton = new JButton("Chameleon",chameleonIcon);
 	
 	public ReptileFrame(String title)

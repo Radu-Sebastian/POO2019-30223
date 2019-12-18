@@ -1,0 +1,402 @@
+<?xml version="1.0"?><content>
+<EMPLOYEES>
+	<id>712010</id>
+	<name>Ilias</name>
+	<isDead>true</isDead>
+	<salary>2142.81</salary>
+	<workingHours>6.51</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEES>
+<EMPLOYEES>
+	<id>5718356</id>
+	<name>Stefan Lacusta</name>
+	<isDead>false</isDead>
+	<salary>2965.96</salary>
+	<workingHours>2.81</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEES>
+<EMPLOYEES>
+	<id>5543686</id>
+	<name>Stefan cel Mare</name>
+	<isDead>true</isDead>
+	<salary>2955.49</salary>
+	<workingHours>5.99</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEES>
+<EMPLOYEES>
+	<id>4941867</id>
+	<name>Roman I</name>
+	<isDead>false</isDead>
+	<salary>3014.71</salary>
+	<workingHours>4.32</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEES>
+<EMPLOYEES>
+	<id>7531939</id>
+	<name>Alexandru Lapusneanu</name>
+	<isDead>true</isDead>
+	<salary>1441.47</salary>
+	<workingHours>7.64</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEES>
+<EMPLOYEES>
+	<id>247328</id>
+	<name>Constantin Brancoveanu</name>
+	<isDead>true</isDead>
+	<salary>2268.17</salary>
+	<workingHours>5.77</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEES>
+<EMPLOYEES>
+	<id>8961884</id>
+	<name>Ilias</name>
+	<isDead>true</isDead>
+	<salary>4179.91</salary>
+	<workingHours>6.85</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEES>
+<EMPLOYEES>
+	<id>2924104</id>
+	<name>Petru Aron</name>
+	<isDead>true</isDead>
+	<salary>4105.16</salary>
+	<workingHours>2.43</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEES>
+<EMPLOYEES>
+	<id>7137642</id>
+	<name>Basarab I</name>
+	<isDead>true</isDead>
+	<salary>3260.95</salary>
+	<workingHours>4.71</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEES>
+<EMPLOYEES>
+	<id>8879949</id>
+	<name>Constantin Mavrocordat</name>
+	<isDead>false</isDead>
+	<salary>1386.8</salary>
+	<workingHours>3.9</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEES>
+<EMPLOYEES>
+	<id>5835580</id>
+	<name>Alexandru cel Bun</name>
+	<isDead>true</isDead>
+	<salary>914.21</salary>
+	<workingHours>1.39</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEES>
+<EMPLOYEES>
+	<id>1705690</id>
+	<name>Vlad Calugarul</name>
+	<isDead>false</isDead>
+	<salary>136.97</salary>
+	<workingHours>0.92</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEES>
+<EMPLOYEES>
+	<id>8303963</id>
+	<name>Ilias</name>
+	<isDead>false</isDead>
+	<salary>2022.62</salary>
+	<workingHours>4.8</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEES>
+<EMPLOYEES>
+	<id>7121286</id>
+	<name>Vlad Calugarul</name>
+	<isDead>true</isDead>
+	<salary>4040.94</salary>
+	<workingHours>5.04</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEES>
+<EMPLOYEES>
+	<id>6440612</id>
+	<name>Basarab I</name>
+	<isDead>false</isDead>
+	<salary>3386.64</salary>
+	<workingHours>6.58</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEES>
+<EMPLOYEES>
+	<id>5882376</id>
+	<name>Latcu</name>
+	<isDead>false</isDead>
+	<salary>4801.41</salary>
+	<workingHours>0.35</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEES>
+<EMPLOYEES>
+	<id>8833515</id>
+	<name>Mihai Racovita</name>
+	<isDead>true</isDead>
+	<salary>4116.34</salary>
+	<workingHours>7.43</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEES>
+<EMPLOYEES>
+	<id>1782042</id>
+	<name>Basarab I</name>
+	<isDead>true</isDead>
+	<salary>857.08</salary>
+	<workingHours>0.88</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEES>
+<EMPLOYEES>
+	<id>4623956</id>
+	<name>Mircea cel Batran</name>
+	<isDead>true</isDead>
+	<salary>2197.88</salary>
+	<workingHours>2.23</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEES>
+<EMPLOYEES>
+	<id>8323596</id>
+	<name>Latcu</name>
+	<isDead>false</isDead>
+	<salary>2090.74</salary>
+	<workingHours>7.4</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEES>
+<EMPLOYEES>
+	<id>3002191</id>
+	<name>Petru I</name>
+	<isDead>true</isDead>
+	<salary>3106.25</salary>
+	<workingHours>2.01</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEES>
+<EMPLOYEES>
+	<id>1704142</id>
+	<name>Vlad Dracu</name>
+	<isDead>false</isDead>
+	<salary>932.38</salary>
+	<workingHours>0.7</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEES>
+<EMPLOYEES>
+	<id>6344866</id>
+	<name>Neagoe Basarab</name>
+	<isDead>false</isDead>
+	<salary>2317.26</salary>
+	<workingHours>2.78</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEES>
+<EMPLOYEES>
+	<id>7531695</id>
+	<name>Constantin Brancoveanu</name>
+	<isDead>true</isDead>
+	<salary>697.31</salary>
+	<workingHours>0.7</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEES>
+<EMPLOYEES>
+	<id>2658168</id>
+	<name>Vlad Dracu</name>
+	<isDead>true</isDead>
+	<salary>4709.8</salary>
+	<workingHours>6.31</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEES>
+<EMPLOYEES>
+	<id>6820682</id>
+	<name>Mihai Viteazul</name>
+	<isDead>false</isDead>
+	<salary>90.09</salary>
+	<workingHours>0.74</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEES>
+<EMPLOYEES>
+	<id>4099264</id>
+	<name>Iuga Ologul</name>
+	<isDead>true</isDead>
+	<salary>143.19</salary>
+	<workingHours>3.19</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEES>
+<EMPLOYEES>
+	<id>7996997</id>
+	<name>Radu cel Frumos</name>
+	<isDead>true</isDead>
+	<salary>3552.15</salary>
+	<workingHours>3.32</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEES>
+<EMPLOYEES>
+	<id>8165964</id>
+	<name>Petru Aron</name>
+	<isDead>true</isDead>
+	<salary>944.52</salary>
+	<workingHours>4.54</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEES>
+<EMPLOYEES>
+	<id>6574359</id>
+	<name>Petru Aron</name>
+	<isDead>true</isDead>
+	<salary>534.3</salary>
+	<workingHours>7.74</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEES>
+<EMPLOYEES>
+	<id>3204707</id>
+	<name>Radu Praznaglava</name>
+	<isDead>false</isDead>
+	<salary>3647.53</salary>
+	<workingHours>2.1</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEES>
+<EMPLOYEES>
+	<id>3395975</id>
+	<name>Roman I</name>
+	<isDead>false</isDead>
+	<salary>2835.01</salary>
+	<workingHours>5.74</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEES>
+<EMPLOYEES>
+	<id>9189228</id>
+	<name>Stefan al II-lea</name>
+	<isDead>false</isDead>
+	<salary>4087.19</salary>
+	<workingHours>5.01</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEES>
+<EMPLOYEES>
+	<id>2010309</id>
+	<name>Dimitrie Cantemir</name>
+	<isDead>false</isDead>
+	<salary>2860.86</salary>
+	<workingHours>5.79</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEES>
+<EMPLOYEES>
+	<id>2764053</id>
+	<name>Alexandru Lapusneanu</name>
+	<isDead>true</isDead>
+	<salary>1873.09</salary>
+	<workingHours>3.67</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEES>
+<EMPLOYEES>
+	<id>3280511</id>
+	<name>Radu I</name>
+	<isDead>false</isDead>
+	<salary>2038.02</salary>
+	<workingHours>5.06</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEES>
+<EMPLOYEES>
+	<id>113</id>
+	<name>Roman al II-lea</name>
+	<isDead>false</isDead>
+	<salary>2339.81</salary>
+	<workingHours>7.88</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEES>
+<EMPLOYEES>
+	<id>2642631</id>
+	<name>Mihai Viteazul</name>
+	<isDead>false</isDead>
+	<salary>2631.65</salary>
+	<workingHours>4.84</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEES>
+<EMPLOYEES>
+	<id>7920950</id>
+	<name>Petru Rares</name>
+	<isDead>false</isDead>
+	<salary>1304.2</salary>
+	<workingHours>5.27</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEES>
+<EMPLOYEES>
+	<id>1365285</id>
+	<name>Radu I</name>
+	<isDead>false</isDead>
+	<salary>2914.81</salary>
+	<workingHours>4.22</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEES>
+<EMPLOYEES>
+	<id>3322147</id>
+	<name>Alexandru cel Bun</name>
+	<isDead>false</isDead>
+	<salary>346.92</salary>
+	<workingHours>3.14</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEES>
+<EMPLOYEES>
+	<id>3023179</id>
+	<name>Leon Tomsa</name>
+	<isDead>false</isDead>
+	<salary>4969.19</salary>
+	<workingHours>0.07</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEES>
+<EMPLOYEES>
+	<id>8995734</id>
+	<name>Gavril Movila</name>
+	<isDead>true</isDead>
+	<salary>2879.51</salary>
+	<workingHours>4.33</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEES>
+<EMPLOYEES>
+	<id>8563944</id>
+	<name>Vlad Calugarul</name>
+	<isDead>false</isDead>
+	<salary>1397.28</salary>
+	<workingHours>1.02</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEES>
+<EMPLOYEES>
+	<id>7868247</id>
+	<name>Mircea cel Batran</name>
+	<isDead>true</isDead>
+	<salary>3958.88</salary>
+	<workingHours>1.17</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEES>
+<EMPLOYEES>
+	<id>4973038</id>
+	<name>Ilias</name>
+	<isDead>true</isDead>
+	<salary>1878.52</salary>
+	<workingHours>0.57</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEES>
+<EMPLOYEES>
+	<id>9147814</id>
+	<name>Vlad I</name>
+	<isDead>false</isDead>
+	<salary>4666.82</salary>
+	<workingHours>3.69</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEES>
+<EMPLOYEES>
+	<id>4244370</id>
+	<name>Radu I</name>
+	<isDead>false</isDead>
+	<salary>2811.97</salary>
+	<workingHours>6.79</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEES>
+<EMPLOYEES>
+	<id>9126818</id>
+	<name>Roman al II-lea</name>
+	<isDead>false</isDead>
+	<salary>4885.62</salary>
+	<workingHours>4.15</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEES>
+<EMPLOYEES>
+	<id>1963775</id>
+	<name>Alexandru Cornea</name>
+	<isDead>true</isDead>
+	<salary>3253.55</salary>
+	<workingHours>0.29</workingHours>
+	<DISCRIMINANT>Caretakers</DISCRIMINANT>
+</EMPLOYEES>
+</content>

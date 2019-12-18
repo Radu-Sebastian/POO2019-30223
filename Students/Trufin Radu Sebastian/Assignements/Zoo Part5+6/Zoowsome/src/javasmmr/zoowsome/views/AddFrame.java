@@ -32,7 +32,7 @@ public class AddFrame extends ZooFrame
     JButton deleteButton = new JButton("Delete");
 	JButton addAnimalButton = new JButton("Add Animals");
 	JButton exitButton = new JButton("Exit");
-	Icon vaultIcon = new ImageIcon(this.getClass().getResource("vaultboy.png"));
+	Icon vaultIcon = new ImageIcon("./resources/vaultboy.png");
 	JButton iconButton = new JButton(" ",vaultIcon);
 	
 	public AddFrame(String title)

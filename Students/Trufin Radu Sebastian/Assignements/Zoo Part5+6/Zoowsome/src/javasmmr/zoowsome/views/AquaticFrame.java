@@ -29,11 +29,11 @@ public class AquaticFrame extends ZooFrame
 	private static final long serialVersionUID = 1L;
 	JPanel gridPanel =  new JPanel(new GridLayout(4, 1));
 	JPanel newPanel = new JPanel(new SpringLayout());
-	Icon salamanderIcon = new ImageIcon(this.getClass().getResource("lizard.png"));
+	Icon salamanderIcon = new ImageIcon("./resources/lizard.png");
 	JButton salamanderButton = new JButton("Salamander",salamanderIcon);
-	Icon clownfishIcon = new ImageIcon(this.getClass().getResource("clownfish.png"));
+	Icon clownfishIcon = new ImageIcon("./resources/clownfish.png");
 	JButton clownfishButton = new JButton("Clownfish",clownfishIcon);
-	Icon seahorseIcon = new ImageIcon(this.getClass().getResource("seahorse.png"));
+	Icon seahorseIcon = new ImageIcon("./resources/seahorse.png");
 	JButton seahorseButton = new JButton("Seahorse",seahorseIcon);
 	
 	public AquaticFrame(String title)

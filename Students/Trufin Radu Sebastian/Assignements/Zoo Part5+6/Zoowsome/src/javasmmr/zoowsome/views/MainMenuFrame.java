@@ -39,7 +39,7 @@ public class MainMenuFrame extends ZooFrame
 		SpringLayout slPanel = new SpringLayout();
 		pan.setLayout(slPanel);
 
-		Icon addIcon = new ImageIcon(getClass().getResource("vault2.png"));
+		Icon addIcon = new ImageIcon("./resources/vault2.png");
 		btnAdd = new JButton("Fill the Zoo!",addIcon);
 		btnAdd.setBackground(new Color(230,230,250));
 		btnAdd.setFont(new Font("Helvetica", Font.CENTER_BASELINE, 20));
@@ -48,7 +48,7 @@ public class MainMenuFrame extends ZooFrame
 		slPanel.putConstraint(SpringLayout.WEST, btnAdd, 0, SpringLayout.WEST, pan);
 		
 		pan.add(btnAdd);
-		Icon listIcon = new ImageIcon(this.getClass().getResource("vault3.png"));
+		Icon listIcon = new ImageIcon("./resources/vault3.png");
 		
 		btnList = new JButton("List the Zoo",listIcon);
 		btnList.setBackground(new Color(230,230,250));
@@ -58,7 +58,7 @@ public class MainMenuFrame extends ZooFrame
 		slPanel.putConstraint(SpringLayout.WEST, btnList, 0, SpringLayout.WEST, pan);
 		
 		pan.add(btnList);
-		Icon saveIcon = new ImageIcon(this.getClass().getResource("vault4.png"));
+		Icon saveIcon = new ImageIcon("./resources/vault4.png");
 		
 		btnSaveAndExit = new JButton("Save & Quit",saveIcon);
 		btnSaveAndExit.addActionListener(event -> exitApplication());

@@ -14,15 +14,15 @@ public class AnimalFrame extends ZooFrame
 	private static final long serialVersionUID = 1L;
 	JPanel gridPanel;
 	
-	Icon mammalIcon = new ImageIcon(this.getClass().getResource("dog.png"));
+	Icon mammalIcon = new ImageIcon("./resources/dog.png");
 	JButton mammalButton = new JButton("Mammal",mammalIcon);
-	Icon birdIcon = new ImageIcon(this.getClass().getResource("toucan.png"));
+	Icon birdIcon = new ImageIcon("./resources/toucan.png");
 	JButton birdButton = new JButton("Bird",birdIcon);
-	Icon insectIcon = new ImageIcon(this.getClass().getResource("insect.png"));
+	Icon insectIcon = new ImageIcon("./resources/insect.png");
 	JButton insectButton = new JButton("Insect",insectIcon);
-	Icon aquaticIcon = new ImageIcon(this.getClass().getResource("fish.png"));
+	Icon aquaticIcon = new ImageIcon("./resources/fish.png");
 	JButton aquaticButton = new JButton("Aquatic",aquaticIcon);
-	Icon reptileIcon = new ImageIcon(this.getClass().getResource("lizard.png"));
+	Icon reptileIcon = new ImageIcon("./resources/lizard.png");
 	JButton reptileButton = new JButton("Reptile",reptileIcon);
 	
 	public AnimalFrame(String title)

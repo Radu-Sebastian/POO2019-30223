@@ -3,6 +3,7 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.Font;
+import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.SimpleDateFormat;
@@ -72,9 +73,13 @@ public abstract class ZooFrame extends JFrame
 	public void setBackButtonAndClockActionListener(ActionListener a) 
 	{
 		JPanel buttonPanel = new JPanel();
+		JPanel clockPanel = new JPanel();
+		JPanel topPanel= new JPanel();
 		JLabel clockLabel = new JLabel();
-		clockLabel.setComponentPopupMenu(new timeMenu());
+		topPanel.setLayout(new GridLayout(0,2));
 		buttonPanel.setLayout(new FlowLayout(FlowLayout.LEFT));
+		clockPanel.setLayout(new FlowLayout(FlowLayout.RIGHT));
+		clockLabel.setComponentPopupMenu(new timeMenu());
 		JButton backButton = new JButton("Back");
 		backButton.setBackground(new Color(230,230,250));
 		backButton.setFont(new Font("Verdana", Font.CENTER_BASELINE, 20));
@@ -82,12 +87,31 @@ public abstract class ZooFrame extends JFrame
 		clockLabel.setBorder(new EmptyBorder(10, 10, 10, 10));
 		clockLabel.setFont(new Font("Century Gothic", Font.CENTER_BASELINE, 20));
 		buttonPanel.add(backButton);
-		clockLabel.setForeground(new Color(67,67,67));
-		buttonPanel.add(clockLabel);
+		clockPanel.add(clockLabel);
+		topPanel.add(buttonPanel);
+		topPanel.add(clockPanel);
+		add(topPanel, BorderLayout.NORTH);
 		currentDate(clockLabel);
-		add(buttonPanel, BorderLayout.NORTH);
 		backButton.addActionListener(a);
 		setVisible(true); 
+	}
+	
+	public void setBackButtonActionListener(ActionListener a) 
+	{
+		JPanel buttonPanel = new JPanel();
+		JPanel clockPanel = new JPanel();
+		JPanel topPanel= new JPanel();
+		topPanel.setLayout(new GridLayout(0,2));
+		buttonPanel.setLayout(new FlowLayout(FlowLayout.LEFT));
+		clockPanel.setLayout(new FlowLayout(FlowLayout.RIGHT));
+		JButton backButton = new JButton("Back");
+		JLabel clock = new JLabel("clock");
+		buttonPanel.add(backButton);
+		clockPanel.add(clock);
+		topPanel.add(buttonPanel);
+		topPanel.add(clockPanel);
+		this.add(topPanel, BorderLayout.NORTH);
+		backButton.addActionListener(a);
 	}
 	
 	public void currentDate(JLabel clockLabel)

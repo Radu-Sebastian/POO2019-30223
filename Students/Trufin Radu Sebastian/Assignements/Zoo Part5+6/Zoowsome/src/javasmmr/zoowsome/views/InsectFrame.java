@@ -30,11 +30,11 @@ public class InsectFrame extends ZooFrame
 	private static final long serialVersionUID = 1L;
 	JPanel gridPanel =  new JPanel(new GridLayout(4, 1));
 	JPanel newPanel = new JPanel(new SpringLayout());
-	Icon cockroachIcon = new ImageIcon(this.getClass().getResource("cockroach.png"));
+	Icon cockroachIcon = new ImageIcon("./resources/cockroach.png");
 	JButton cockroachButton = new JButton("Cockroach",cockroachIcon);
-	Icon spiderIcon = new ImageIcon(this.getClass().getResource("spider.png"));
+	Icon spiderIcon = new ImageIcon("./resources/spider.png");
 	JButton spiderButton = new JButton("Spider",spiderIcon);
-	Icon butterflyIcon = new ImageIcon(this.getClass().getResource("butterfly.png"));
+	Icon butterflyIcon = new ImageIcon("./resources/butterfly.png");
 	JButton butterflyButton = new JButton("Butterfly",butterflyIcon);
 	
 	public InsectFrame(String title)

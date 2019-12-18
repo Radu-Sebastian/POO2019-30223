@@ -30,11 +30,11 @@ public class MammalFrame extends ZooFrame
 	private static final long serialVersionUID = 1L;
 	JPanel gridPanel  = new JPanel(new GridLayout(4, 1));
 	JPanel newPanel = new JPanel(new SpringLayout());
-	Icon monkeyIcon = new ImageIcon(this.getClass().getResource("monkey.png"));
+	Icon monkeyIcon = new ImageIcon("./resources/monkey.png");
 	JButton monkeyButton = new JButton("Monkey",monkeyIcon);
-	Icon tigerIcon = new ImageIcon(this.getClass().getResource("tiger.png"));
+	Icon tigerIcon = new ImageIcon("./resources/tiger.png");
 	JButton tigerButton = new JButton("Tiger",tigerIcon);
-	Icon cowIcon = new ImageIcon(this.getClass().getResource("cow.png"));
+	Icon cowIcon = new ImageIcon("./resources/cow.png");
 	JButton cowButton = new JButton("Cow",cowIcon);
 	
 	public MammalFrame(String title)

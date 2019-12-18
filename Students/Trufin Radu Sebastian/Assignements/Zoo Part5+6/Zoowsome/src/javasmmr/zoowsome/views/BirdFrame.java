@@ -29,11 +29,11 @@ public class BirdFrame extends ZooFrame
 	private static final long serialVersionUID = 1L;
 	JPanel gridPanel =  new JPanel(new GridLayout(4, 1));
 	JPanel newPanel = new JPanel(new SpringLayout());
-	Icon kiwiIcon = new ImageIcon(this.getClass().getResource("kiwi.png"));
+	Icon kiwiIcon = new ImageIcon("./resources/kiwi.png");
 	JButton kiwiButton = new JButton("Kiwi",kiwiIcon);
-	Icon colibriIcon = new ImageIcon(this.getClass().getResource("colibri.png"));
+	Icon colibriIcon = new ImageIcon("./resources/colibri.png");
 	JButton colibriButton = new JButton("Colibri",colibriIcon);
-	Icon penguinIcon = new ImageIcon(this.getClass().getResource("penguin.png"));
+	Icon penguinIcon = new ImageIcon("./resources/penguin.png");
 	JButton penguinButton = new JButton("Penguin",penguinIcon);
 	
 	public BirdFrame(String title)
